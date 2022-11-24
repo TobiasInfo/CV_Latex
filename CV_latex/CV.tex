@@ -1,7 +1,7 @@
 % CV.tex
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
-\documentclass[10pt, oneside, a4paper, titlepage]{article}
+\documentclass[9pt, oneside, a4paper, titlepage]{extarticle}
 
 \usepackage[most]{tcolorbox}
 \usepackage{tikz}
@@ -9,6 +9,8 @@
 \usepackage[]{geometry}
 \usepackage{booktabs}
 \usepackage{setspace}
+\usepackage{multicol}
+\usepackage{hyperref}
 \geometry{
     a4paper,
     left=0.1cm,
@@ -28,23 +30,28 @@
     \tcbset{colframe=gray!95!black, colback=titleBack, arc = 3mm}
     \begin{tcolorbox}
         % Use to fill in the top
+        % Affichage de l'image 
         \begin{minipage}{0.3\linewidth}
             %This is the place for the picture of your face
             % \hspace*{-0.3cm}\includegraphics[scale = 0.5]{img/TOBIAS SAVARY Photo identité Oct2020.jpg}
+            \hspace*{1cm} % Permet de déplacer l'image vers la droite
             \begin{tikzpicture} 
-
                 \begin{scope}
                     \clip [rounded corners=.5cm] (0,0) rectangle coordinate (centerpoint) (3.5,5cm); 
-                    \node [inner sep=0pt] at (centerpoint) {\includegraphics[width=4.0cm]{img/TOBIAS SAVARY Photo identité Oct2020.jpg}}; 
+                    \node [inner sep=0pt] at (centerpoint) {\includegraphics[width=3.5cm]{img/PhotoCV.png}}; 
                 \end{scope}
             \end{tikzpicture}
         \end{minipage}%
         \hspace{1cm}%%
         \begin{minipage}{0.5\linewidth}
+            % Titre du CV
             \begin{center}
                 \Huge{\textcolor{white}{Tobias SAVARY}} \\
                 \vspace*{0.5cm}
-                \Large{\textcolor{white}{\emph{Student in Engeneering, Computer Science  University of Technology of Compiègne (UTC)}}}
+                % Ajouter : Cherche un stage de 6 mois Sept 2023
+                \Large{\textcolor{white}{\emph{Student in Engeneering, Computer Science  University of Technology of Compiègne (UTC) \\
+                Looking for an internship engineer in September 2023
+                }}}
             \end{center}
         \end{minipage}%
     \end{tcolorbox}
@@ -53,7 +60,7 @@
     \begin{tcolorbox}
         \vspace*{0.2cm}
         \hspace*{0.7mm}
-        \begin{minipage}[t]{7cm}
+        \begin{minipage}[t]{6.2cm}
             \begin{spacing}{0.95}
             \vspace*{-0.5cm}
             \begin{tcolorbox}[grow to left by = 0.6cm, colback = gray!25, colframe = white]
@@ -66,40 +73,58 @@
                 \vspace*{0.2cm}
                 
                 \hspace*{0.4cm}
-                60730 Cauvigny\\ \\
+                60730 Cauvigny - France\\ \\
                 \hspace*{0.4cm}
-                Tel: 07 65 21 77 91\\
+                Tel: +33 7 65 21 77 91\\
                 \hspace*{0.4cm}
                 Email: savarytobias@hotmail.com\\
-
+                \hspace*{0.4cm}
+                \href{www.linkedin.com/in/tobiassavary}{www.linkedin.com/in/tobiassavary}
+                \vspace*{0.2cm}
                 \section*{Expertise}
+                \begin{multicols}{2}
                 \begin{itemize}
                     \item Python
                     \item C
+                    \item C++
+                    \item SQL
                     \item Ocaml
+                    \columnbreak                    
+                    \item Lisp
                     \item ARM
                     \item HTML
                     \item CSS
                     \item \LaTeX
                 \end{itemize}
-                \vspace*{1mm}
+                \end{multicols}
+                \vspace*{0.2cm}
                 \section*{Skills}
 
                 \begin{itemize}
-                    \item Comfortable use of office software (Word / Excel / Paint/ \\PowerPoint / \LaTeX \ldots);
+                    \vspace*{0.3cm}
+                    \item Comfortable use of office software (Word / Excel / Paint/ \\PowerPoint / \LaTeX \ldots)
+                    \vspace*{0.2cm}
+                    \item Ease of use for various mobile \\applications
+                    \vspace*{0.2cm}
+                    \item Mastery of programming languages: Python, C, C++, SQL, Ocaml, Lisp, ARM, HTML, CSS.
+                    \vspace*{0.2cm}
+                    \item Car driving license\\
 
-                    \item Easy use of various mobile \\applications;
-
-                    \item Mastery of programming languages: Python, C, Ocaml, HTML, CSS, ARM. \\
                 \end{itemize}
 
 
-
+                \vspace*{0.2cm}
                 \section*{Activities and interests}
                 
                 \begin{itemize}
-                    \item Active involvement in the communication events proposed by the school (Open House, Student Day, presentation of the training to the students of Terminal in the high schools of the agglomeration);
-                    \item Cycling and involvement in various events and sports meetings;
+                    \vspace*{0.3cm}
+                    \item Active involvement in the communication events proposed 
+                    by the school (Open House, Student Day, presentation of the 
+                    training to the students of final year in the high schools of 
+                    the agglomeration)
+                    \vspace*{0.2cm}
+                    \item Cycling and involvement in various events and sports meetings
+                    \vspace*{0.2cm}
                     \item Swimming, Badminton, 
                     
                     Table Tennis.
@@ -109,61 +134,62 @@
         \end{spacing}
         \end{minipage}
         \hspace*{0.4mm}
-        \begin{minipage}[t]{12cm}
+        \begin{minipage}[t]{12.8cm}
             \vspace*{-0.5cm}
             \begin{tcolorbox}[grow to right by = 0.6cm, colback = gray!25, colframe = white]
                 \section*{Project}
                 \begin{itemize}
-                    \item Creation of board games with Python (scrabble, Futoshiki);
-                    \item Mathematical sets management with Ocaml;
+                    \item Creation of board games with Python (Scrabble, Futoshiki)
+                    \item Mathematical sets management with Ocaml
                     \item Phylogenetic tree processing, encoding and decoding of 
                     encrypted messages, image contours simplification and moving 
-                    a robot in C;
-                    \item Coding simple web pages with HTML and CSS.
-
+                    a robot in C
+                    \item Coding simple web pages with HTML and CSS
+                    \item Object-oriented programming in C++: design and development of the Machi Koro board game
+                    \item Design and implement a database for a veterinary clinic in SQL with a Python interface
+                    \item Realization of an expert system in Lisp
                 \end{itemize}
                 
                 \section*{Professional experience}
                 \begin{itemize}
-                    \item \textbf{2022}: Excellence internship of 2 months in the INRIA 
-                    laboratory of Grenoble in order to realize a 
+                    \item \textbf{2022 - present}: Work in the university library (Reception, promotion of digital resources, organization of events\dots)
+                    \item \textbf{2022}: 2 month excellence internship in the INRIA 
+                    laboratory in Grenoble in order to realize a 
                     graphical interface to develop a game for learning
-                    debugging;
+                    debugging
                     \item \textbf{2021}: Professional internship in the Oise departmental services:
-                    \begin{itemize}
-                        
-                        \item Multi-skilled administrative agent -  Social Works Committee [COS60]
-                        \item Multi-skilled administrative agent - Departmental House for Handicapped Persons of the Oise [MDPH60]
-                        \item Reception agent - Oise Departmental Housing Information Agency [ADIL60]
-                        
-                        
-                        
+                    \begin{itemize}  
+                        \item Multi-skilled administrative assistant -  Social Works Committee [COS60]
+                        \item Multi-skilled administrative assistant - Departmental House for Handicapped Persons of the Oise [MDPH60]
+                        \item Receptionist agent - Oise Departmental Housing Information Agency [ADIL60]
                     \end{itemize}
                 
-                    \item \textbf{2017}: Observation internship in computer science at the Digital \\Department of the Departmental Council;
+                    \item \textbf{2017}: Observation internship in computer science at the Digital Department of the Departmental Council
                     
-                    \item \textbf{2017-2022}: Childcare and private lessons.
+                    \item \textbf{2017-2022}: Childcare and private lessons of mathematics and computer course
                 \end{itemize}
 
-                \section*{Education and training}
+                \section*{Education}
                 \begin{itemize}
-                    \item \textbf{2022}: Studying computer engineering at the UTC;
+                    % Master degree in computer engineering expected Jul 2025
+                    % Student computer engineering at the UTC expected Jul 2025
+                    \item \textbf{2022}: Master degree in computer engineering expected Jul 2025
                     \item \textbf{2020-2022}: Preparatory training integrated into the Polytech 
                     \\ network of engineering schools, backed up by the "Mathematics 
                     and Computer Science" courses of the University of Grenoble Alpes [UGA], 
                     including cross-disciplinary courses 
-                    (English, project management, professional exploration, etc.). \emph{Ranking: 120th out of 1,564 students};
-                    \item \textbf{2020}: driving license (Car license);
-                    \item \textbf{2020}: Baccalaureate (Serie S - European section English - Honors); 
-                    \item \textbf{2018}: Cambridge English Certification;
-                    \item \textbf{2017}: National Diploma of Brevet (Honors).
+                    (English, project management, professional exploration, etc.). \emph{Ranking: 120th out of 1,564 students}
+                    \item \textbf{2020}: Baccalauréat (Serie S - European section English - With Honors)
+                    \item \textbf{2018}: Cambridge English Certification
+                    \item \textbf{2017}: National Diploma of Brevet (With Honors)
                 \end{itemize}
 
                 \section*{Langages}
-                    English(B2) and German(A2) 
                     \begin{itemize}
-                        \item Language training in England (host family - 1 week);
-                        \item Language training in Germany (school exchange - 1 week).
+                        \item French(Native speaker)
+                        \item English(European B2 level),One week immersion in a host family (England)
+                        \item German(European A2 level), One week of school exchange (Germany)
+                         % One week of school exchange
                     \end{itemize}
 
                 
